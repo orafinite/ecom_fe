@@ -1,2 +1,6 @@
-export { default as Home } from "./home";
-export { default as Auth } from "./auth";
+import { lazy } from "react";
+
+const Home = lazy(() => import("./home"));
+const Auth = lazy(() => import("./auth"));
+
+export { Home, Auth };
