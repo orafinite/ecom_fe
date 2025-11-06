@@ -26,26 +26,26 @@ export default function Navbar() {
   // Vanishing input states and refs
   const placeholders = useMemo(
     () => [
-      "Enlightened Buddha statues",
-      "Lotus Buddha sculpture",
-      "Bodhisattva figurines",
-      "Zen garden decor",
-      "Meditating monk statues",
-      "Tibetan prayer wheels",
-      "Golden Pagoda sculptures",
-      "Incense holders",
-      "Mala beads and bracelets",
-      "Thangka paintings",
-      "Buddhist ritual items",
-      "Zen garden accessories",
-      "Tibetan singing bowls",
-      "Mudra hand gestures",
-      "Buddhist prayer flags",
-      "Enlightenment artwork",
-      "Buddhist meditation aids",
-      "Dharma teachings",
-      "Buddhist wisdom books",
-      "Sacred Bodhi tree art",
+    "Mechanical keyboards",
+  "Wireless gaming mice",
+  "4K Ultra HD monitors",
+  "Smartphones and accessories",
+  "Gaming headsets",
+  "Ergonomic mouse pads",
+  "RGB PC cases",
+  "Laptop cooling pads",
+  "USB-C hubs and adapters",
+  "Mechanical key switches",
+  "Bluetooth speakers",
+  "Noise-cancelling headphones",
+  "Wireless chargers",
+  "Portable SSD drives",
+  "Graphics cards",
+  "Smartwatches and fitness bands",
+  "Gaming chairs",
+  "VR headsets",
+  "Mechanical keyboard keycaps",
+  "Monitor arms and stands"
     ],
     []
   );
@@ -199,7 +199,7 @@ export default function Navbar() {
         <div className="flex flex-1 items-center gap-2">
           {/* Main nav */}
           <div className="flex flex-1 items-center gap-6 max-md:justify-between">
-            <a href="#" className="text-primary hover:text-primary/90">
+            <a href="/" className="text-primary hover:text-primary/90">
               <Logo />
             </a>
             <NavigationMenu className="max-md:hidden">
