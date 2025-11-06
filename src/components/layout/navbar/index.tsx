@@ -1,4 +1,11 @@
-import { useId, useCallback, useEffect, useRef, useState, useMemo } from "react";
+import {
+  useId,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  useMemo,
+} from "react";
 import { SearchIcon, ShoppingCart } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -18,11 +25,15 @@ import {
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 
-const navigationLinks = [{ href: "#", label: "Shop" }];
+const navigationLinks = [
+  { href: "/", label: "Home" },
+  { href: "#", label: "Shop" },
+  { href: "products", label: "Products" },
+];
 
 export default function Navbar() {
   const id = useId();
-  
+
   // Vanishing input states and refs
   const placeholders = useMemo(
     () => [
@@ -186,7 +197,7 @@ export default function Navbar() {
         0
       );
       animate(maxX);
-      
+
       // Add your search logic here
       console.log("Searching for:", value);
     }
@@ -278,18 +289,29 @@ export default function Navbar() {
               </AnimatePresence>
             </div>
           </div>
-          <Button asChild size="icon" className="text-sm relative max-md:hidden">
+          <Button
+            asChild
+            size="icon"
+            className="text-sm relative max-md:hidden"
+          >
             <a href="#">
               <span className="flex items-baseline gap-2">
-                <ShoppingCart/>
-                <span className="text-[9px] absolute top-0 right-0 bg-red-700 rounded-full size-3 items-center justify-center flex ">2</span>
+                <ShoppingCart />
+                <span className="text-[9px] absolute top-0 right-0 bg-red-700 rounded-full size-3 items-center justify-center flex ">
+                  2
+                </span>
               </span>
             </a>
           </Button>
-          <Button asChild variant="ghost" size="sm" className="text-sm max-md:hidden">
+          <Button
+            asChild
+            variant="ghost"
+            size="sm"
+            className="text-sm max-md:hidden"
+          >
             <a href="/login">Sign In</a>
           </Button>
-          
+
           {/* Mobile menu trigger - NOW ON RIGHT */}
           <Popover>
             <PopoverTrigger asChild>

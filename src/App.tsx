@@ -2,8 +2,9 @@
 import { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "@/components/layout";
-import { Home, Auth } from "@/pages";
+import { Home, Auth,Product } from "@/pages";
 import { Spinner } from "@/components/ui/spinner";
+
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/login" element={<Auth />} />
+          <Route path="/products" element={<Product/>} />
         </Routes>
       </Suspense>
     </Layout>

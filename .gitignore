@@ -12,6 +12,9 @@
 .env.test.local
 
 # Logs
+# Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -21,6 +24,18 @@ pnpm-debug.log*
 .DS_Store
 .vscode/
 .idea/
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
@@ -55,3 +70,4 @@ Thumbs.db
 # package-lock.json
 # yarn.lock
 # pnpm-lock.yaml
+.vite
