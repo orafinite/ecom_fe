@@ -8,7 +8,7 @@ import {
 } from "react";
 import { SearchIcon, ShoppingCart } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-
+import CartSidebar from "../cart/cart-sidebar";
 import Logo from "./logo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -60,7 +60,7 @@ export default function Navbar() {
     ],
     []
   );
-
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const newDataRef = useRef<any[]>([]);
@@ -204,6 +204,7 @@ export default function Navbar() {
   };
 
   return (
+    <>
     <header className="border-b px-4 md:px-6">
       <div className="flex h-16 items-center justify-between gap-4">
         {/* Left side */}
@@ -293,12 +294,13 @@ export default function Navbar() {
             asChild
             size="icon"
             className="text-sm relative max-md:hidden"
+            onClick={() => setIsCartOpen(true)}
           >
             <a href="#">
               <span className="flex items-baseline gap-2">
                 <ShoppingCart />
                 <span className="text-[9px] absolute top-0 right-0 bg-red-700 rounded-full size-3 items-center justify-center flex ">
-                  2
+                  1
                 </span>
               </span>
             </a>
@@ -378,6 +380,7 @@ export default function Navbar() {
                       asChild
                       size="sm"
                       className="mt-0.5 w-full text-left text-sm"
+                      onClick={() => setIsCartOpen(true)}
                     >
                       <span className="flex items-baseline gap-2">
                         Cart
@@ -394,5 +397,7 @@ export default function Navbar() {
         </div>
       </div>
     </header>
+    <CartSidebar isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+    </>
   );
 }
