@@ -1,0 +1,59 @@
+[
+  {
+    "title": "Flagship Laptop",
+    "subtitle": "New Arrival",
+    "description": "Our most powerful laptop featuring next-gen CPUs, long battery life, and a stunning display for creators and professionals.",
+    "badge": "NEW",
+    "ctaText": "Shop Now",
+    "variant": "featured",
+    "image": "laptop.jpg"
+  },
+  {
+    "title": "Wireless Headphones",
+    "subtitle": "Audio",
+    "description": "Immersive sound with active noise cancellation and long battery life for travel and work.",
+    "ctaText": "Shop Now",
+    "image": "headphones.jpg"
+  },
+  {
+    "title": "4K Monitor",
+    "subtitle": "Display",
+    "description": "Ultra-high-definition monitor with HDR and color accuracy for creative professionals.",
+    "badge": "LIMITED",
+    "ctaText": "Shop Now",
+    "image": "monitor.jpg"
+  },
+  {
+    "title": "Gaming Laptop",
+    "subtitle": "Performance",
+    "description": "High-refresh-rate display, powerful GPU, and thermal performance built for gaming.",
+    "badge": "SALE",
+    "ctaText": "Shop Now",
+    "image": "gaming.jpg"
+  },
+  {
+    "title": "Smart Home Hub",
+    "subtitle": "Home",
+    "description": "Control lights, thermostats, and security with a single, secure hub.",
+    "ctaText": "Shop Now",
+    "image": "smarthome.jpg"
+  },
+  {
+    "title": "Mesh Wi-Fi Router",
+    "subtitle": "Networking",
+    "description": "Whole-home coverage with fast throughput and easy setup.",
+    "badge": "ECO",
+    "ctaText": "Shop Now",
+    "image": "router.jpg"
+  },
+  {
+    "title": "Noise-Cancelling Earbuds",
+    "subtitle": "Audio",
+    "description": "Compact earbuds with active noise cancellation and up to 8 hours battery life.",
+    "badge": "NEW",
+    "ctaText": "Buy Now",
+    "ctaLink": "https://example.com/product/earbuds",
+    "variant": "default",
+    "image": ""
+  }
+]

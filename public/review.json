@@ -1,0 +1,50 @@
+[
+  {
+    "id": "r1",
+    "name": "User 1",
+    "date": "Sep 2, 2025",
+    "rating": 5,
+    "comment": "Sample 1",
+    "avatar": null
+  },
+  {
+    "id": "r2",
+    "name": "User 2",
+    "date": "Oct 27, 2025",
+    "rating": 4,
+    "comment": "Sample 2",
+    "avatar": null
+  },
+  {
+    "id": "r3",
+    "name": "User 3",
+    "date": "Sep 18, 2025",
+    "rating": 5,
+    "comment": "Sample 3",
+    "avatar": null
+  },
+  {
+    "id": "r4",
+    "name": "User 4",
+    "date": "Jan 18, 2025",
+    "rating": 1,
+    "comment": "Sample 4",
+    "avatar": null
+  },
+  {
+    "id": "r5",
+    "name": "User 5",
+    "date": "Feb 18, 2025",
+    "rating": 2,
+    "comment": "Sample 5",
+    "avatar": null
+  },
+  {
+    "id": "r6",
+    "name": "User 6",
+    "date": "Sep 18, 2025",
+    "rating": 3,
+    "comment": "Sample 6",
+    "avatar": null
+  }
+]
