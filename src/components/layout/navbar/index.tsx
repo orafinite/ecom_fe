@@ -24,6 +24,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
+import { useCart } from "@/context/CartContent";
 
 const navigationLinks = [
   { href: "/", label: "Home" },
@@ -33,6 +34,8 @@ const navigationLinks = [
 
 export default function Navbar() {
   const id = useId();
+  const { getCartCount } = useCart();
+  const cartCount = getCartCount();
 
   // Vanishing input states and refs
   const placeholders = useMemo(
@@ -299,9 +302,11 @@ export default function Navbar() {
             <a href="#">
               <span className="flex items-baseline gap-2">
                 <ShoppingCart />
-                <span className="text-[9px] absolute top-0 right-0 bg-red-700 rounded-full size-3 items-center justify-center flex ">
-                  1
-                </span>
+                {cartCount > 0 && (
+                  <span className="text-[9px] absolute top-0 right-0 bg-red-700 rounded-full size-3 items-center justify-center flex">
+                    {cartCount > 9 ? '9+' : cartCount}
+                  </span>
+                )}
               </span>
             </a>
           </Button>
@@ -384,9 +389,11 @@ export default function Navbar() {
                     >
                       <span className="flex items-baseline gap-2">
                         Cart
-                        <span className="text-xs text-primary-foreground/60">
-                          2
-                        </span>
+                        {cartCount > 0 && (
+                          <span className="text-xs text-primary-foreground/60">
+                            {cartCount}
+                          </span>
+                        )}
                       </span>
                     </Button>
                   </NavigationMenuItem>

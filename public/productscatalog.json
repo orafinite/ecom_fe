@@ -1,59 +1,934 @@
-[
-  {
-    "title": "Flagship Laptop",
-    "subtitle": "New Arrival",
-    "description": "Our most powerful laptop featuring next-gen CPUs, long battery life, and a stunning display for creators and professionals.",
-    "badge": "NEW",
-    "ctaText": "Shop Now",
-    "variant": "featured",
-    "image": "laptop.jpg"
-  },
-  {
-    "title": "Wireless Headphones",
-    "subtitle": "Audio",
-    "description": "Immersive sound with active noise cancellation and long battery life for travel and work.",
-    "ctaText": "Shop Now",
-    "image": "headphones.jpg"
-  },
-  {
-    "title": "4K Monitor",
-    "subtitle": "Display",
-    "description": "Ultra-high-definition monitor with HDR and color accuracy for creative professionals.",
-    "badge": "LIMITED",
-    "ctaText": "Shop Now",
-    "image": "monitor.jpg"
-  },
-  {
-    "title": "Gaming Laptop",
-    "subtitle": "Performance",
-    "description": "High-refresh-rate display, powerful GPU, and thermal performance built for gaming.",
-    "badge": "SALE",
-    "ctaText": "Shop Now",
-    "image": "gaming.jpg"
-  },
-  {
-    "title": "Smart Home Hub",
-    "subtitle": "Home",
-    "description": "Control lights, thermostats, and security with a single, secure hub.",
-    "ctaText": "Shop Now",
-    "image": "smarthome.jpg"
-  },
-  {
-    "title": "Mesh Wi-Fi Router",
-    "subtitle": "Networking",
-    "description": "Whole-home coverage with fast throughput and easy setup.",
-    "badge": "ECO",
-    "ctaText": "Shop Now",
-    "image": "router.jpg"
-  },
-  {
-    "title": "Noise-Cancelling Earbuds",
-    "subtitle": "Audio",
-    "description": "Compact earbuds with active noise cancellation and up to 8 hours battery life.",
-    "badge": "NEW",
-    "ctaText": "Buy Now",
-    "ctaLink": "https://example.com/product/earbuds",
-    "variant": "default",
-    "image": ""
-  }
-]
+{
+  "categories": [
+    {
+      "name": "Laptops & Computers",
+      "slug": "laptops",
+      "description": "High-performance laptops and computers for work, gaming, and creativity",
+      "image": "category-laptops.jpg",
+      "products": [
+        {
+          "title": "Flagship Laptop Pro",
+          "description": "Our most powerful laptop featuring Intel Core i9 13th Gen, 32GB RAM, 1TB SSD, and a stunning 4K OLED display for creators and professionals.",
+          "badge": "NEW",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/flagship-laptop",
+          "image": "laptop.jpg",
+          "price": "$2,499",
+          "specs": {
+            "processor": "Intel Core i9-13900H",
+            "ram": "32GB DDR5",
+            "storage": "1TB NVMe SSD",
+            "display": "15.6\" 4K OLED"
+          }
+        },
+        {
+          "title": "Gaming Laptop Elite",
+          "description": "High-refresh-rate 240Hz display, NVIDIA RTX 4080, and advanced thermal performance built for serious gaming.",
+          "badge": "SALE",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/gaming-laptop",
+          "image": "gaming.jpg",
+          "price": "$1,899",
+          "specs": {
+            "processor": "AMD Ryzen 9 7945HX",
+            "gpu": "NVIDIA RTX 4080",
+            "ram": "32GB DDR5",
+            "display": "17.3\" 240Hz QHD"
+          }
+        },
+        {
+          "title": "Ultrabook Air",
+          "description": "Ultra-lightweight laptop with all-day battery life, perfect for students and business travelers.",
+          "badge": "BEST SELLER",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/ultrabook",
+          "image": "ultrabook.jpg",
+          "price": "$1,299",
+          "specs": {
+            "processor": "Intel Core i7-1355U",
+            "weight": "2.2 lbs",
+            "battery": "18 hours",
+            "display": "13.3\" FHD"
+          }
+        },
+        {
+          "title": "Budget Chromebook",
+          "description": "Affordable and fast Chromebook for everyday tasks, perfect for students and remote work.",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/chromebook",
+          "image": "",
+          "price": "$399",
+          "specs": {
+            "processor": "MediaTek Kompanio 520",
+            "ram": "8GB",
+            "storage": "128GB eMMC"
+          }
+        },
+        {
+          "title": "Workstation Desktop",
+          "description": "Professional-grade desktop with multi-core processing and ECC memory for CAD, rendering, and data science.",
+          "badge": "PRO",
+          "ctaText": "Configure",
+          "ctaLink": "https://example.com/product/workstation",
+          "image": "",
+          "price": "$3,499",
+          "specs": {
+            "processor": "Intel Xeon W-2295",
+            "ram": "64GB ECC",
+            "storage": "2TB NVMe + 4TB HDD",
+            "gpu": "NVIDIA RTX A5000"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Audio & Headphones",
+      "slug": "audio",
+      "description": "Premium audio equipment for music lovers, gamers, and professionals",
+      "image": "category-audio.jpg",
+      "products": [
+        {
+          "title": "Wireless Headphones Pro",
+          "description": "Premium over-ear headphones with adaptive ANC, spatial audio, and 40-hour battery life for travel and work.",
+          "badge": "FEATURED",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/wireless-headphones",
+          "image": "headphones.jpg",
+          "price": "$349",
+          "features": [
+            "Active Noise Cancellation",
+            "40-hour battery",
+            "Spatial Audio",
+            "Premium leather cushions"
+          ]
+        },
+        {
+          "title": "Noise-Cancelling Earbuds",
+          "description": "Compact true wireless earbuds with active noise cancellation, transparency mode, and up to 8 hours battery life per charge.",
+          "badge": "NEW",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/earbuds",
+          "image": "",
+          "price": "$229",
+          "features": [
+            "Active ANC",
+            "8hr + 24hr case",
+            "Water resistant IPX4",
+            "Touch controls"
+          ]
+        },
+        {
+          "title": "Studio Monitor Speakers",
+          "description": "Professional reference monitors with flat frequency response for music production and mixing.",
+          "badge": "PRO",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/studio-monitors",
+          "image": "",
+          "price": "$599",
+          "features": [
+            "5-inch woofer",
+            "Frequency response: 43Hz-30kHz",
+            "XLR and TRS inputs",
+            "Room correction software"
+          ]
+        },
+        {
+          "title": "Gaming Headset RGB",
+          "description": "Immersive 7.1 surround sound gaming headset with detachable mic and RGB lighting.",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/gaming-headset",
+          "image": "",
+          "price": "$149",
+          "features": [
+            "7.1 Virtual Surround",
+            "Detachable boom mic",
+            "RGB lighting",
+            "50mm drivers"
+          ]
+        },
+        {
+          "title": "Portable Bluetooth Speaker",
+          "description": "Waterproof outdoor speaker with 360° sound and 20-hour battery for adventures.",
+          "badge": "OUTDOOR",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/bluetooth-speaker",
+          "image": "",
+          "price": "$129",
+          "features": [
+            "IP67 waterproof",
+            "20-hour battery",
+            "360° sound",
+            "Rugged design"
+          ]
+        },
+        {
+          "title": "USB Podcast Microphone",
+          "description": "Professional condenser microphone with cardioid pattern, perfect for streaming and podcasting.",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/podcast-mic",
+          "image": "",
+          "price": "$179",
+          "features": [
+            "Cardioid pattern",
+            "USB-C connection",
+            "Headphone monitoring",
+            "Desktop stand included"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Displays & Monitors",
+      "slug": "displays",
+      "description": "Crystal-clear monitors and displays for work, gaming, and entertainment",
+      "image": "category-displays.jpg",
+      "products": [
+        {
+          "title": "4K Monitor Ultra",
+          "description": "32-inch ultra-high-definition monitor with 99% Adobe RGB, HDR600, and color accuracy for creative professionals.",
+          "badge": "LIMITED",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/4k-monitor",
+          "image": "monitor.jpg",
+          "price": "$899",
+          "specs": {
+            "size": "32 inches",
+            "resolution": "3840 x 2160",
+            "refresh": "60Hz",
+            "panel": "IPS",
+            "color": "99% Adobe RGB"
+          }
+        },
+        {
+          "title": "Gaming Monitor 165Hz",
+          "description": "27-inch QHD gaming monitor with 165Hz refresh rate, 1ms response time, and G-Sync support.",
+          "badge": "GAMING",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/gaming-monitor",
+          "image": "",
+          "price": "$449",
+          "specs": {
+            "size": "27 inches",
+            "resolution": "2560 x 1440",
+            "refresh": "165Hz",
+            "response": "1ms",
+            "sync": "G-Sync Compatible"
+          }
+        },
+        {
+          "title": "Ultrawide Curved Monitor",
+          "description": "34-inch curved ultrawide with 21:9 aspect ratio for immersive multitasking and gaming.",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/ultrawide",
+          "image": "",
+          "price": "$699",
+          "specs": {
+            "size": "34 inches",
+            "resolution": "3440 x 1440",
+            "aspect": "21:9",
+            "curvature": "1800R",
+            "refresh": "100Hz"
+          }
+        },
+        {
+          "title": "Portable USB-C Monitor",
+          "description": "15.6-inch portable touchscreen monitor with USB-C connectivity for on-the-go productivity.",
+          "badge": "PORTABLE",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/portable-monitor",
+          "image": "",
+          "price": "$249",
+          "specs": {
+            "size": "15.6 inches",
+            "resolution": "1920 x 1080",
+            "touch": "10-point touch",
+            "connectivity": "USB-C",
+            "weight": "1.5 lbs"
+          }
+        },
+        {
+          "title": "Budget Office Monitor",
+          "description": "24-inch Full HD monitor with IPS panel and VESA mount support, perfect for home offices.",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/office-monitor",
+          "image": "",
+          "price": "$159",
+          "specs": {
+            "size": "24 inches",
+            "resolution": "1920 x 1080",
+            "panel": "IPS",
+            "ports": "HDMI, VGA",
+            "vesa": "75x75mm"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Smart Home & IoT",
+      "slug": "smart-home",
+      "description": "Connected devices and automation to make your home smarter and more efficient",
+      "image": "category-smarthome.jpg",
+      "products": [
+        {
+          "title": "Smart Home Hub Pro",
+          "description": "Central control hub for lights, thermostats, locks, and security cameras with voice control and automation.",
+          "badge": "BESTSELLER",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/smart-home-hub",
+          "image": "smarthome.jpg",
+          "price": "$179",
+          "compatibility": [
+            "Alexa",
+            "Google Home",
+            "Apple HomeKit",
+            "Zigbee",
+            "Z-Wave"
+          ]
+        },
+        {
+          "title": "Smart Thermostat",
+          "description": "Learning thermostat that saves energy by adapting to your schedule and preferences.",
+          "badge": "ECO",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/thermostat",
+          "image": "",
+          "price": "$249",
+          "features": [
+            "Auto-scheduling",
+            "Energy reports",
+            "Remote control",
+            "Works with Alexa & Google"
+          ]
+        },
+        {
+          "title": "Smart Video Doorbell",
+          "description": "HD video doorbell with two-way audio, motion detection, and cloud recording.",
+          "badge": "SECURITY",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/doorbell",
+          "image": "",
+          "price": "$199",
+          "features": [
+            "1080p HD video",
+            "Two-way audio",
+            "Motion alerts",
+            "Night vision"
+          ]
+        },
+        {
+          "title": "Smart Light Bulbs (4-Pack)",
+          "description": "Color-changing LED bulbs with app control, voice commands, and scheduling.",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/smart-bulbs",
+          "image": "",
+          "price": "$79",
+          "features": [
+            "16 million colors",
+            "App & voice control",
+            "Scheduling",
+            "No hub required"
+          ]
+        },
+        {
+          "title": "Indoor Security Camera",
+          "description": "1080p indoor camera with pan/tilt, motion tracking, and two-way audio.",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/indoor-camera",
+          "image": "",
+          "price": "$49",
+          "features": [
+            "1080p video",
+            "Pan & tilt",
+            "Motion tracking",
+            "Free cloud storage"
+          ]
+        },
+        {
+          "title": "Smart Plug (2-Pack)",
+          "description": "WiFi smart plugs to control any device remotely with scheduling and energy monitoring.",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/smart-plugs",
+          "image": "",
+          "price": "$29",
+          "features": [
+            "Remote control",
+            "Scheduling",
+            "Energy monitoring",
+            "Voice control"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Networking & WiFi",
+      "slug": "networking",
+      "description": "Routers, mesh systems, and networking gear for fast and reliable connectivity",
+      "image": "category-networking.jpg",
+      "products": [
+        {
+          "title": "Mesh Wi-Fi System (3-Pack)",
+          "description": "Whole-home WiFi 6 mesh coverage up to 6,000 sq ft with fast gigabit speeds and easy setup.",
+          "badge": "ECO",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/mesh-router",
+          "image": "router.jpg",
+          "price": "$399",
+          "specs": {
+            "standard": "WiFi 6 (802.11ax)",
+            "speed": "AX5400",
+            "coverage": "6,000 sq ft",
+            "devices": "100+ devices"
+          }
+        },
+        {
+          "title": "Gaming Router WiFi 6E",
+          "description": "Tri-band WiFi 6E router with gaming prioritization, 2.5G WAN port, and advanced QoS.",
+          "badge": "GAMING",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/gaming-router",
+          "image": "",
+          "price": "$449",
+          "specs": {
+            "standard": "WiFi 6E",
+            "speed": "AXE11000",
+            "ports": "1x 2.5G WAN, 4x Gigabit LAN",
+            "features": "Game Accelerator, VPN Fusion"
+          }
+        },
+        {
+          "title": "Range Extender WiFi 6",
+          "description": "Dual-band WiFi extender to eliminate dead zones and extend coverage up to 1,500 sq ft.",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/range-extender",
+          "image": "",
+          "price": "$89",
+          "specs": {
+            "standard": "WiFi 6",
+            "speed": "AX1800",
+            "coverage": "+1,500 sq ft",
+            "ethernet": "1x Gigabit port"
+          }
+        },
+        {
+          "title": "8-Port Gigabit Switch",
+          "description": "Unmanaged network switch for fast wired connections with plug-and-play setup.",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/network-switch",
+          "image": "",
+          "price": "$39",
+          "specs": {
+            "ports": "8x Gigabit Ethernet",
+            "speed": "10/100/1000 Mbps",
+            "type": "Unmanaged",
+            "power": "Desktop"
+          }
+        },
+        {
+          "title": "Cable Modem DOCSIS 3.1",
+          "description": "Multi-gigabit cable modem compatible with major ISPs, future-proof for ultra-fast speeds.",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/cable-modem",
+          "image": "",
+          "price": "$179",
+          "specs": {
+            "standard": "DOCSIS 3.1",
+            "speed": "Up to 10 Gbps",
+            "compatibility": "Xfinity, Spectrum, Cox",
+            "ports": "2.5G Ethernet"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Smartphones & Tablets",
+      "slug": "mobile",
+      "description": "Latest smartphones and tablets with cutting-edge features",
+      "image": "category-mobile.jpg",
+      "products": [
+        {
+          "title": "Flagship Smartphone Pro",
+          "description": "6.7-inch AMOLED display, 5G connectivity, triple camera system with 108MP main sensor.",
+          "badge": "FLAGSHIP",
+          "ctaText": "Pre-order",
+          "ctaLink": "https://example.com/product/flagship-phone",
+          "image": "",
+          "price": "$1,199",
+          "specs": {
+            "display": "6.7\" AMOLED 120Hz",
+            "processor": "Snapdragon 8 Gen 3",
+            "camera": "108MP + 12MP + 12MP",
+            "battery": "5,000mAh",
+            "storage": "256GB/512GB"
+          }
+        },
+        {
+          "title": "Budget Smartphone",
+          "description": "Affordable 5G phone with large battery, dual cameras, and smooth 90Hz display.",
+          "badge": "VALUE",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/budget-phone",
+          "image": "",
+          "price": "$299",
+          "specs": {
+            "display": "6.5\" LCD 90Hz",
+            "processor": "MediaTek Dimensity 700",
+            "camera": "50MP + 2MP",
+            "battery": "5,000mAh",
+            "storage": "128GB"
+          }
+        },
+        {
+          "title": "Tablet Pro 12.9",
+          "description": "Professional tablet with M2 chip, ProMotion display, and Apple Pencil support.",
+          "badge": "PRO",
+          "ctaText": "Configure",
+          "ctaLink": "https://example.com/product/tablet-pro",
+          "image": "",
+          "price": "$1,099",
+          "specs": {
+            "display": "12.9\" Liquid Retina XDR",
+            "processor": "Apple M2",
+            "storage": "128GB - 2TB",
+            "connectivity": "WiFi 6E + 5G"
+          }
+        },
+        {
+          "title": "Android Tablet 10\"",
+          "description": "Entertainment tablet with vivid display, quad speakers, and long battery life.",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/android-tablet",
+          "image": "",
+          "price": "$349",
+          "specs": {
+            "display": "10.1\" Full HD",
+            "processor": "Snapdragon 695",
+            "storage": "128GB + microSD",
+            "battery": "8,000mAh"
+          }
+        },
+        {
+          "title": "E-Reader Premium",
+          "description": "7-inch e-ink display with adjustable warm light, waterproof design, and weeks of battery life.",
+          "badge": "READER",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/ereader",
+          "image": "",
+          "price": "$189",
+          "features": [
+            "7\" glare-free display",
+            "Adjustable warm light",
+            "IPX8 waterproof",
+            "32GB storage",
+            "Weeks of battery"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gaming & Accessories",
+      "slug": "gaming",
+      "description": "Gaming consoles, controllers, and accessories for the ultimate gaming experience",
+      "image": "category-gaming.jpg",
+      "products": [
+        {
+          "title": "Next-Gen Gaming Console",
+          "description": "Powerful gaming console with 4K 120fps gaming, ray tracing, and ultra-fast SSD.",
+          "badge": "HOT",
+          "ctaText": "Check Stock",
+          "ctaLink": "https://example.com/product/gaming-console",
+          "image": "",
+          "price": "$499",
+          "specs": {
+            "resolution": "4K at 120fps",
+            "storage": "1TB SSD",
+            "features": "Ray tracing, VRR",
+            "controller": "Wireless included"
+          }
+        },
+        {
+          "title": "Wireless Gaming Controller",
+          "description": "Premium controller with customizable buttons, hair-trigger locks, and 40-hour battery.",
+          "badge": "PRO",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/controller",
+          "image": "",
+          "price": "$179",
+          "features": [
+            "Customizable buttons",
+            "Hair-trigger locks",
+            "40-hour battery",
+            "USB-C charging"
+          ]
+        },
+        {
+          "title": "Gaming Keyboard Mechanical",
+          "description": "RGB mechanical keyboard with hot-swappable switches and programmable macros.",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/gaming-keyboard",
+          "image": "",
+          "price": "$149",
+          "features": [
+            "Hot-swappable switches",
+            "Per-key RGB",
+            "Programmable macros",
+            "Braided USB-C cable"
+          ]
+        },
+        {
+          "title": "Gaming Mouse RGB",
+          "description": "26,000 DPI optical sensor, 11 programmable buttons, and customizable RGB lighting.",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/gaming-mouse",
+          "image": "",
+          "price": "$79",
+          "specs": {
+            "dpi": "Up to 26,000",
+            "buttons": "11 programmable",
+            "sensor": "Optical",
+            "rgb": "16.8M colors"
+          }
+        },
+        {
+          "title": "Gaming Chair Ergonomic",
+          "description": "Premium ergonomic gaming chair with lumbar support, adjustable armrests, and reclining backrest.",
+          "badge": "COMFORT",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/gaming-chair",
+          "image": "",
+          "price": "$399",
+          "features": [
+            "Adjustable lumbar support",
+            "4D armrests",
+            "Recline up to 180°",
+            "PU leather"
+          ]
+        },
+        {
+          "title": "Capture Card 4K60",
+          "description": "PCIe capture card for streaming and recording gameplay in 4K at 60fps with zero latency.",
+          "badge": "STREAMING",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/capture-card",
+          "image": "",
+          "price": "$249",
+          "specs": {
+            "resolution": "4K60 HDR",
+            "passthrough": "4K60 HDR",
+            "latency": "Zero lag",
+            "interface": "PCIe x4"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cameras & Photography",
+      "slug": "cameras",
+      "description": "Professional cameras, lenses, and photography equipment",
+      "image": "category-cameras.jpg",
+      "products": [
+        {
+          "title": "Mirrorless Camera Pro",
+          "description": "Full-frame 45MP mirrorless camera with in-body stabilization and 8K video recording.",
+          "badge": "PRO",
+          "ctaText": "Learn More",
+          "ctaLink": "https://example.com/product/mirrorless-camera",
+          "image": "",
+          "price": "$3,499",
+          "specs": {
+            "sensor": "45MP Full-frame",
+            "video": "8K30 / 4K120",
+            "stabilization": "5-axis IBIS",
+            "autofocus": "693-point AF"
+          }
+        },
+        {
+          "title": "Action Camera 4K",
+          "description": "Waterproof action camera with HyperSmooth stabilization and voice control.",
+          "badge": "ADVENTURE",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/action-camera",
+          "image": "",
+          "price": "$399",
+          "features": [
+            "4K60 video",
+            "HyperSmooth 6.0",
+            "Waterproof to 33ft",
+            "Voice control"
+          ]
+        },
+        {
+          "title": "Instant Camera",
+          "description": "Retro-style instant camera that prints credit-card-sized photos in seconds.",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/instant-camera",
+          "image": "",
+          "price": "$129",
+          "features": [
+            "Auto exposure",
+            "Built-in flash",
+            "Selfie mirror",
+            "Prints in 90 seconds"
+          ]
+        },
+        {
+          "title": "Gimbal Stabilizer",
+          "description": "3-axis smartphone gimbal with intelligent tracking and 12-hour battery life.",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/gimbal",
+          "image": "",
+          "price": "$149",
+          "features": [
+            "3-axis stabilization",
+            "ActiveTrack 5.0",
+            "12-hour battery",
+            "Portable design"
+          ]
+        },
+        {
+          "title": "Camera Drone 4K",
+          "description": "Foldable drone with 4K camera, 3-axis gimbal, and 30-minute flight time.",
+          "badge": "FLY",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/drone",
+          "image": "",
+          "price": "$899",
+          "specs": {
+            "camera": "4K60 1/2\" sensor",
+            "gimbal": "3-axis mechanical",
+            "flight": "30 minutes",
+            "range": "10km"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Wearables & Fitness",
+      "slug": "wearables",
+      "description": "Smartwatches, fitness trackers, and health monitoring devices",
+      "image": "category-wearables.jpg",
+      "products": [
+        {
+          "title": "Smartwatch Pro",
+          "description": "Premium smartwatch with AMOLED display, ECG, blood oxygen monitoring, and GPS.",
+          "badge": "FEATURED",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/smartwatch-pro",
+          "image": "",
+          "price": "$449",
+          "features": [
+            "1.4\" AMOLED",
+            "ECG & SpO2",
+            "GPS + Cellular",
+            "7-day battery",
+            "100+ workout modes"
+          ]
+        },
+        {
+          "title": "Fitness Tracker Band",
+          "description": "Affordable fitness band with heart rate monitoring, sleep tracking, and 14-day battery.",
+          "badge": "VALUE",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/fitness-band",
+          "image": "",
+          "price": "$49",
+          "features": [
+            "Heart rate 24/7",
+            "Sleep tracking",
+            "14-day battery",
+            "Water resistant 5ATM"
+          ]
+        },
+        {
+          "title": "Running Watch GPS",
+          "description": "Dedicated running watch with advanced metrics, training plans, and ultra-long battery.",
+          "badge": "RUNNER",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/running-watch",
+          "image": "",
+          "price": "$349",
+          "features": [
+            "Multi-GNSS",
+            "VO2 max estimation",
+            "Training load",
+            "Up to 40 hours GPS"
+          ]
+        },
+        {
+          "title": "Smart Ring",
+          "description": "Discreet health tracking ring monitoring sleep, activity, and readiness scores.",
+          "badge": "NEW",
+          "ctaText": "Pre-order",
+          "ctaLink": "https://example.com/product/smart-ring",
+          "image": "",
+          "price": "$299",
+          "features": [
+            "Sleep tracking",
+            "Activity tracking",
+            "Readiness score",
+            "7-day battery",
+            "Titanium design"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Storage & Accessories",
+      "slug": "storage",
+      "description": "External drives, SSDs, memory cards, and storage solutions",
+      "image": "category-storage.jpg",
+      "products": [
+        {
+          "title": "Portable SSD 2TB",
+          "description": "Ultra-fast USB 3.2 Gen 2 portable SSD with up to 1,050 MB/s transfer speeds.",
+          "badge": "FAST",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/portable-ssd",
+          "image": "",
+          "price": "$199",
+          "specs": {
+            "capacity": "2TB",
+            "interface": "USB 3.2 Gen 2",
+            "speed": "Up to 1,050 MB/s",
+            "size": "Pocket-sized"
+          }
+        },
+        {
+          "title": "NAS 4-Bay",
+          "description": "Network-attached storage with RAID support, media server, and automatic backup.",
+          "badge": "PRO",
+          "ctaText": "Configure",
+          "ctaLink": "https://example.com/product/nas",
+          "image": "",
+          "price": "$449",
+          "features": [
+            "4-bay hot-swap",
+            "RAID 0/1/5/6/10",
+            "Plex media server",
+            "2.5GbE network"
+          ]
+        },
+        {
+          "title": "microSD Card 512GB",
+          "description": "High-speed UHS-I microSD card for cameras, drones, and mobile devices.",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/microsd",
+          "image": "",
+          "price": "$79",
+          "specs": {
+            "capacity": "512GB",
+            "class": "UHS-I U3, V30",
+            "speed": "Up to 170 MB/s read",
+            "rating": "A2 for apps"
+          }
+        },
+        {
+          "title": "External HDD 5TB",
+          "description": "High-capacity external hard drive for backup and mass storage.",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/external-hdd",
+          "image": "",
+          "price": "$129",
+          "specs": {
+            "capacity": "5TB",
+            "interface": "USB 3.0",
+            "rpm": "5400 RPM",
+            "backup": "Auto backup software"
+          }
+        },
+        {
+          "title": "USB Flash Drive 256GB",
+          "description": "Compact USB-C and USB-A dual connector flash drive with fast transfer speeds.",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/flash-drive",
+          "image": "",
+          "price": "$39",
+          "specs": {
+            "capacity": "256GB",
+            "connectors": "USB-C + USB-A",
+            "speed": "Up to 200 MB/s read"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Office & Productivity",
+      "slug": "office",
+      "description": "Printers, scanners, and office equipment for productivity",
+      "image": "category-office.jpg",
+      "products": [
+        {
+          "title": "Wireless Printer All-in-One",
+          "description": "Color inkjet printer with scanning, copying, WiFi, and auto-duplex printing.",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/printer",
+          "image": "",
+          "price": "$249",
+          "features": [
+            "Print, scan, copy",
+            "WiFi & Ethernet",
+            "Auto duplex",
+            "Mobile printing"
+          ]
+        },
+        {
+          "title": "Standing Desk Electric",
+          "description": "Height-adjustable standing desk with memory presets and cable management.",
+          "badge": "HEALTH",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/standing-desk",
+          "image": "",
+          "price": "$599",
+          "specs": {
+            "size": "60\" x 30\"",
+            "height": "28\" - 48\"",
+            "motor": "Dual motor",
+            "presets": "4 memory settings"
+          }
+        },
+        {
+          "title": "Ergonomic Office Chair",
+          "description": "Mesh office chair with lumbar support, adjustable armrests, and breathable design.",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/office-chair",
+          "image": "",
+          "price": "$349",
+          "features": [
+            "Mesh backrest",
+            "Adjustable lumbar",
+            "3D armrests",
+            "Tilt tension control"
+          ]
+        },
+        {
+          "title": "Document Scanner",
+          "description": "High-speed duplex document scanner with OCR and wireless connectivity.",
+          "ctaText": "Buy Now",
+          "ctaLink": "https://example.com/product/scanner",
+          "image": "",
+          "price": "$399",
+          "specs": {
+            "speed": "40 ppm duplex",
+            "capacity": "50-sheet ADF",
+            "connectivity": "WiFi, USB",
+            "software": "OCR included"
+          }
+        },
+        {
+          "title": "Webcam 4K",
+          "description": "Ultra HD webcam with autofocus, AI framing, and dual noise-canceling mics.",
+          "badge": "WFH",
+          "ctaText": "Shop Now",
+          "ctaLink": "https://example.com/product/webcam",
+          "image": "",
+          "price": "$199",
+          "features": [
+            "4K 30fps video",
+            "Auto framing",
+            "Dual mics",
+            "Low-light correction"
+          ]
+        }
+      ]
+    }
+  ]
+}

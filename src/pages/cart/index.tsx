@@ -1,89 +1,27 @@
-import React from "react";
-import {  Plus, Minus, Trash2, ArrowRight, ShoppingBag } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-
-interface CartItem {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
-  image: string;
-  variant?: string;
-  maxQuantity?: number;
-}
+import { Plus, Minus, Trash2, ArrowRight, ShoppingBag } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import { useCart } from '@/context/CartContent';
 
 export default function CartPage() {
-  // Sample cart data - replace with your actual cart state
-  const [cartItems, setCartItems] = React.useState<CartItem[]>([
-    {
-      id: "1",
-      name: "Wireless Headphones",
-      price: 89.99,
-      quantity: 1,
-      image: "/images/headphones.jpg",
-      variant: "Black Edition",
-      maxQuantity: 10,
-    },
-    {
-      id: "2",
-      name: "Smart Watch",
-      price: 129.99,
-      quantity: 2,
-      image: "/images/watch.jpg",
-      variant: "Silver",
-      maxQuantity: 5,
-    },
-    {
-      id: "2",
-      name: "Smart Watch",
-      price: 129.99,
-      quantity: 2,
-      image: "/images/watch.jpg",
-      variant: "Silver",
-      maxQuantity: 5,
-    },
-  ]);
+  const { cartItems, updateQuantity, removeFromCart } = useCart();
 
   // Calculate totals
-  const subtotal = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
+  const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const shipping = subtotal > 100 ? 0 : 9.99;
   const tax = subtotal * 0.1; // 10% tax
   const total = subtotal + shipping + tax;
 
-  const updateQuantity = (id: string, newQuantity: number) => {
-    setCartItems((items) =>
-      items.map((item) =>
-        item.id === id
-          ? {
-              ...item,
-              quantity: Math.max(
-                1,
-                Math.min(newQuantity, item.maxQuantity || 99)
-              ),
-            }
-          : item
-      )
-    );
-  };
-
-  const removeItem = (id: string) => {
-    setCartItems((items) => items.filter((item) => item.id !== id));
-  };
-
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-primary/10 via-background to-background py-12">
+      <section className="bg-gradient-to-r from-primary/10 via-background to-background py-12 border-b">
         <div className="max-w-7xl mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-extrabold">Shopping Cart</h1>
           <p className="text-muted-foreground mt-2">
-            {cartItems.length} {cartItems.length === 1 ? "item" : "items"} in
-            your cart
+            {cartItems.length} {cartItems.length === 1 ? 'item' : 'items'} in your cart
           </p>
         </div>
       </section>
@@ -96,12 +34,11 @@ export default function CartPage() {
             <ShoppingBag className="w-32 h-32 text-muted-foreground/40 mb-6" />
             <h2 className="text-3xl font-bold mb-4">Your cart is empty</h2>
             <p className="text-muted-foreground mb-8 text-center max-w-md">
-              Looks like you haven't added any items to your cart yet. Start
-              shopping to fill it up!
+              Looks like you haven't added any items to your cart yet. Start shopping to fill it up!
             </p>
-            <Button size="lg">
-              <a href="/">Continue Shopping</a>
-            </Button>
+            <Link to="/products">
+              <Button size="lg">Start Shopping</Button>
+            </Link>
           </div>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -109,26 +46,42 @@ export default function CartPage() {
             <div className="lg:col-span-2 space-y-4">
               <h2 className="text-2xl font-bold mb-6">Cart Items</h2>
               {cartItems.map((item) => (
-                <Card key={item.id} className="hover:shadow-md transition-shadow">
-                  <CardContent className="p-4">
-                    <div className="flex gap-6 h-30">
+                <Card key={item.id} className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="flex gap-6">
                       {/* Product Image */}
-                      <div className="relative w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden bg-muted">
-                        <img
-                          src={item.image}
-                          alt={item.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
+                      <Link
+                        to={`/products/${item.categorySlug}/${item.productSlug}`}
+                        className="relative w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 hover:opacity-80 transition-opacity"
+                      >
+                        {item.image ? (
+                          <img
+                            src={item.image}
+                            alt={item.name}
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                              e.currentTarget.style.display = 'none';
+                              e.currentTarget.parentElement!.innerHTML = '<div class="flex items-center justify-center h-full text-gray-400 text-4xl">📦</div>';
+                            }}
+                          />
+                        ) : (
+                          <div className="flex items-center justify-center h-full text-gray-400 text-4xl">
+                            📦
+                          </div>
+                        )}
+                      </Link>
 
                       {/* Product Details */}
                       <div className="flex-1 flex flex-col justify-between">
                         <div>
                           <div className="flex justify-between items-start mb-2">
                             <div>
-                              <h3 className="font-semibold text-lg">
-                                {item.name}
-                              </h3>
+                              <Link
+                                to={`/products/${item.categorySlug}/${item.productSlug}`}
+                                className="hover:text-blue-600 transition-colors"
+                              >
+                                <h3 className="font-semibold text-lg">{item.name}</h3>
+                              </Link>
                               {item.variant && (
                                 <p className="text-sm text-muted-foreground mt-1">
                                   Variant: {item.variant}
@@ -138,8 +91,8 @@ export default function CartPage() {
                             <Button
                               variant="ghost"
                               size="icon"
-                              onClick={() => removeItem(item.id)}
-                              className="text-destructive hover:text-destructive"
+                              onClick={() => removeFromCart(item.id)}
+                              className="text-destructive hover:text-destructive hover:bg-destructive/10"
                             >
                               <Trash2 className="h-5 w-5" />
                             </Button>
@@ -151,28 +104,22 @@ export default function CartPage() {
 
                         {/* Quantity Controls */}
                         <div className="flex items-center justify-between mt-4">
-                          <div className="flex items-center gap-2 border rounded-lg">
+                          <div className="flex items-center gap-2 border-2 rounded-lg">
                             <Button
                               variant="ghost"
                               size="icon"
                               className="h-10 w-10"
-                              onClick={() =>
-                                updateQuantity(item.id, item.quantity - 1)
-                              }
+                              onClick={() => updateQuantity(item.id, item.quantity - 1)}
                               disabled={item.quantity <= 1}
                             >
                               <Minus className="h-4 w-4" />
                             </Button>
-                            <span className="w-12 text-center font-medium">
-                              {item.quantity}
-                            </span>
+                            <span className="w-12 text-center font-medium">{item.quantity}</span>
                             <Button
                               variant="ghost"
                               size="icon"
                               className="h-10 w-10"
-                              onClick={() =>
-                                updateQuantity(item.id, item.quantity + 1)
-                              }
+                              onClick={() => updateQuantity(item.id, item.quantity + 1)}
                               disabled={item.quantity >= (item.maxQuantity || 99)}
                             >
                               <Plus className="h-4 w-4" />
@@ -189,14 +136,16 @@ export default function CartPage() {
               ))}
 
               {/* Continue Shopping Button */}
-              <Button variant="outline" size="lg" className="mt-6">
-                <a href="/">← Continue Shopping</a>
-              </Button>
+              <Link to="/products">
+                <Button variant="outline" size="lg" className="mt-6">
+                  ← Continue Shopping
+                </Button>
+              </Link>
             </div>
 
             {/* Order Summary Section */}
             <div className="lg:col-span-1">
-              <Card className=" top-6 sticky mt-14">
+              <Card className="top-6 sticky">
                 <CardContent className="p-6">
                   <h2 className="text-2xl font-bold mb-6">Order Summary</h2>
 
@@ -210,9 +159,7 @@ export default function CartPage() {
                       <span className="text-muted-foreground">Shipping</span>
                       <span className="font-medium">
                         {shipping === 0 ? (
-                          <span className="text-green-600 font-semibold">
-                            Free
-                          </span>
+                          <span className="text-green-600 font-semibold">Free</span>
                         ) : (
                           `$${shipping.toFixed(2)}`
                         )}
@@ -221,8 +168,11 @@ export default function CartPage() {
 
                     {shipping > 0 && subtotal < 100 && (
                       <div className="text-sm text-muted-foreground bg-muted/50 p-3 rounded-lg">
-                        💡 Add <span className="font-semibold text-foreground">${(100 - subtotal).toFixed(2)}</span> more for free
-                        shipping
+                        💡 Add{' '}
+                        <span className="font-semibold text-foreground">
+                          ${(100 - subtotal).toFixed(2)}
+                        </span>{' '}
+                        more for free shipping
                       </div>
                     )}
 
@@ -267,8 +217,7 @@ export default function CartPage() {
       <section className="bg-primary text-primary-foreground text-center py-16 px-6">
         <h2 className="text-3xl font-bold mb-4">Need Help?</h2>
         <p className="max-w-xl mx-auto mb-8">
-          Have questions about your order? Our customer service team is here to
-          help you 24/7.
+          Have questions about your order? Our customer service team is here to help you 24/7.
         </p>
         <Button variant="secondary" size="lg">
           Contact Support
